@@ -36,8 +36,8 @@
 ## Important Milestones
 - [x] Milestone 1: Find a teammate and register for a project (April 10, 2019)
 - [x] Milestone 2: Publish the webpage and submit the link (May 1, 2019)
-- [ ] Milestone 3: Design, requirements, information representation, and one page poster submission (May 15, 2019)
-- [ ] Milestone 4: Final implementation and video on YouTube (June 10, 2019)
+- [x] Milestone 3: Design, requirements, information representation, and one page poster submission (May 15, 2019)
+- [x] Milestone 4: Final implementation and video on YouTube (June 10, 2019)
 
 
 ## Similar Projects
