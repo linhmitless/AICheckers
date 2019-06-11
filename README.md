@@ -15,12 +15,37 @@
 
 
 ## Table of Contents
+- [How to Install and Play] (#how-to-install-and-play)
 - [Developers](#developers)
 - [Project Goals](#project-goals)
 - [Important Milestones](#important-milestones)
 - [Similar Projects](#similar-projects)
 - [Course Contact](#course-contact)
 - [Copyright and license](#copyright-and-license)
+
+## How to Install and Play 
+In your command line, navigate to the folder directory with all the downloaded files. Type: 
+`pip install numpy`
+`pip install Flask`
+
+Then, to run Flask, type:
+On Unix Bash (Linux, Mac, etc.):
+
+`$ export FLASK_APP=__init__.py`
+`$ flask run`
+
+Windows CMD:
+
+`> set FLASK_APP=__init__.py`
+`> flask run`
+
+Windows PowerShell:
+
+`> $env:FLASK_APP = "__init__.py"`
+`> flask run`
+
+Then locate to 127.0.0.1:5000 on **Google Chrome** to run the game. 
+**Note**: The game MUST be run on Google Chrome. Mozilla Firefox, Internet Explorer is not supported.
 
 ## Developers
 
