@@ -24,8 +24,12 @@
 - [Copyright and license](#copyright-and-license)
 
 ## How to Install and Play 
-In your command line, navigate to the folder directory with all the downloaded files. Type: 
+In your command line, navigate to the folder directory with all the downloaded files. 
+<br />
+Type: 
+<br />
 `pip install numpy`
+<br />
 `pip install Flask`
 
 Then, to run Flask, type:
