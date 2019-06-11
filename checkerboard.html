@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head> 
+   
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/checkers_style.css') }}">
+
+
+    <script type="text/javascript" >
+
+  
+
+        var dragged;
+        var selected_move;
+
+        /* events fired on the draggable target */
+        document.addEventListener("drag", function(event) {
+
+        }, false);
+
+        document.addEventListener("dragstart", function(event) {
+          // store a ref. on the dragged elem
+          dragged = event.target;
+
+          parent = dragged.parentNode.id;
+          console.log("PARENT");
+          console.log(parent);
+
+          document.getElementById("prev_square").value = parent;
+          // make it half transparent
+          event.target.style.opacity = .5;
+        }, false);
+
+        document.addEventListener("dragend", function(event) {
+          // reset the transparency
+          event.target.style.opacity = "";
+        }, false);
+
+        /* events fired on the drop targets */
+        document.addEventListener("dragover", function(event) {
+          // prevent default to allow drop
+          event.preventDefault();
+        }, false);
+
+        document.addEventListener("dragenter", function(event) {
+          // highlight potential drop target when the draggable element enters it
+          
+            event.target.style.background = "black";
+          
+
+        }, false);
+
+        document.addEventListener("dragleave", function(event) {
+          // reset background of potential drop target when the draggable element leaves it
+          
+            event.target.style.background = "";
+          
+
+        }, false);
+
+        document.addEventListener("drop", function(event) {
+          // prevent default action (open as link for some elements)
+            event.preventDefault();
+          // move dragged elem to the selected drop target
+          
+            event.target.style.background = "";
+            dragged.parentNode.removeChild( dragged );
+            event.target.appendChild( dragged );
+            console.log("target child");
+            console.log(event.target.id);
+
+            selected_move = event.target.id;
+            document.getElementById("move_value").value = selected_move;
+           
+          
+        }, false);
+    </script>
+
+</head>
+
+
+<body>
+
+
+<div class="layout">
+    
+    <div class="container">
+    {% set ns = namespace(counter=0) %}
+      {% for i in range(8) %}
+          <div class="column">
+             {% for j in range(8) %}
+                {% if j is divisibleby 2 %}
+                     <section id="row-even-{{ns.counter}}">
+                         {% if board[j][i] == 'r' %}
+                         <div class="checker-red"></div>
+                         {% elif board[j][i] == 'R' %}
+                         <div class="checker-red">K</div>
+
+                        {% elif board[j][i] == 'b' %}
+               
+                         <div draggable="true" class="checker-black"></div>
+
+                         {% elif board[j][i] == 'B' %}
+                         <div draggable="true" class="checker-black">K</div>
+               
+                        {% endif %}
+                     </section>
+               
+                 {% else %}
+               
+                     <section id="row-odd-{{ns.counter}}">
+                         {% if board[j][i] == 'r' %}
+                        <div class="checker-red"></div>
+                         {% elif board[j][i] == 'R' %}
+                         <div class="checker-red">K</div>
+               
+                     {% elif board[j][i] == 'b' %}
+               
+                     <div draggable="true" class="checker-black"></div>
+                     {% elif board[j][i] == 'B' %}
+                        <div draggable="true" class="checker-black">K</div>
+               
+                         {% endif %}
+                     </section>
+               
+                 {% endif %}
+                 {% set ns.counter = ns.counter + 1 %}
+             {% endfor %}
+          </div>  
+       {% endfor %}
+
+     
+      
+    </div>
+
+ 
+
+    <form action="{{ url_for('showBoard',board=board) }}" method="post">
+    <div class="style-button">
+        <input type="hidden" id="move_value" name="move_value" >
+         <input type="hidden" id="prev_square" name="prev_square" >
+        <input type="submit" value="Submit Move">
+    </div>
+    </form>
+
+ 
+    
+</div>
+
+
+
+
+</body>
+
+</html>
+
