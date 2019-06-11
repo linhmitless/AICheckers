@@ -16,12 +16,14 @@
 
 ## Table of Contents
 - [How to Install and Play](#how-to)
+- [Implementation](#implementation)
 - [Developers](#developers)
 - [Project Goals](#project-goals)
 - [Important Milestones](#important-milestones)
 - [Similar Projects](#similar-projects)
 - [Course Contact](#course-contact)
 - [Copyright and license](#copyright-and-license)
+
 
 ## How to Install and Play 
 In your command line, navigate to the folder directory with all the downloaded files. 
@@ -52,7 +54,20 @@ Windows PowerShell:
 `> flask run`
 
 Then locate to 127.0.0.1:5000 on **Google Chrome** to run the game. 
-**Note**: The game MUST be run on Google Chrome. Mozilla Firefox, Internet Explorer is not supported.
+**Note**: The game MUST be run on Google Chrome. Mozilla Firefox, Internet Explorer, and other browsers may negatively affect gameplay.
+
+## Implementation
+<br />
+Backend: Python
+<br />
+1. Minimax with limited depth
+<br />
+2. Alpha-beta pruning
+<br />
+3. Improved evaluation using Close Distance algorithm 
+<br />
+<br />
+Frontend: HTML, CSS, JavaScript, Flask
 
 ## Developers
 
