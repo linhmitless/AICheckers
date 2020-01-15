@@ -20,9 +20,11 @@
 - [Developers](#developers)
 - [Project Goals](#project-goals)
 - [Important Milestones](#important-milestones)
+- [Project Demo Video] (#project-demo-video)
 - [Similar Projects](#similar-projects)
 - [Course Contact](#course-contact)
 - [Copyright and license](#copyright-and-license)
+
 
 
 ## How to Install and Play 
@@ -86,6 +88,8 @@ Frontend: HTML, CSS, JavaScript, Flask
 - [x] Milestone 3: Design, requirements, information representation, and one page poster submission (May 15, 2019)
 - [x] Milestone 4: Final implementation and video on YouTube (June 10, 2019)
 
+## Project Demo Video
+https://www.youtube.com/watch?v=Fh5NWPxONKE&feature=youtu.be
 
 ## Similar Projects
 - [Draughts AI](https://github.com/Hsankesara/Draughts-AI)
