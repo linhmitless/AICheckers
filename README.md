@@ -20,7 +20,7 @@
 - [Developers](#developers)
 - [Project Goals](#project-goals)
 - [Important Milestones](#important-milestones)
-- [Project Demo Video] (#project-demo-video)
+- [Project Demo Video](#project-demo-video)
 - [Similar Projects](#similar-projects)
 - [Course Contact](#course-contact)
 - [Copyright and license](#copyright-and-license)
